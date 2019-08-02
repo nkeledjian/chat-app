@@ -1,7 +1,7 @@
-import * as types from "../constants/ActionTypes";
+import * as types from '../constants/ActionTypes';
 
 // in a reducer you always pass in the current state and an action and you return the new state
-// if no state, set to empty array
+// if no state, default is set to an empty array
 const messages = (state = [], action) => {
     switch (action.type) {
         case types.ADD_MESSAGE:
