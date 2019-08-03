@@ -1,11 +1,12 @@
 import React from 'React';
 import PropTypes from 'Prop-types';
+import Message from './Message'
 
-const MessagesList = ({messages}) => (
+const MessagesList = ({ messages }) => (
     <section id="messages-list">
         <ul>
-            {MessagesList.map(message => (
-                <Messages
+            {messages.map(message => (
+                <Message
                     key={message.id}
                     {...message}
                 />
@@ -24,4 +25,4 @@ MessagesList.PropTypes = {
     ).isRequired
 }
 
-export default MessagesList;
+export default MessagesListComponent;

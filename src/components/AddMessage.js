@@ -5,7 +5,7 @@ const AddMessage = (props) => {
     let input;
 
     return (
-        <section id="new-message"
+        <section id="new-message">
             <input
                 onKeyPress = {(e) => {
                     if (e.key === 'Enter') {
@@ -14,9 +14,10 @@ const AddMessage = (props) => {
                     }
                 }}
                 type = 'text'
-                ref {(node) => {
+                ref = {(node) => {
                     input = node
                 }}
+            />
         </section>
     )
 }
@@ -25,4 +26,4 @@ AddMessage.PropTypes = {
     dispatch: PropTypes.func.isRequired
 }
 
-export default AddMessage
+export default AddMessageComponent;
