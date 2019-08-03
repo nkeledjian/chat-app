@@ -16,7 +16,7 @@ const AddMessage = (props) => {
                 type = 'text'
                 ref {(node) => {
                     input = node
-                }}>    
+                }}
         </section>
     )
 }
