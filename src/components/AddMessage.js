@@ -26,4 +26,4 @@ AddMessage.propTypes = {
     dispatch: propTypes.func.isRequired
 }
 
-export default AddMessageComponent;
+export default AddMessage;
