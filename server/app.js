@@ -11,9 +11,10 @@ const broadcast = (data, ws) => {
         }   
     })
 };
-
+// web socket server connection
 wss.on('connection', (ws) => {
     let index;
+    // listens for ADD_USER or ADD_MESSAGE events
     ws.on('message', (message) => {
         const data = JSON.parse(message);
         switch (data.type) {
@@ -41,6 +42,7 @@ wss.on('connection', (ws) => {
                 break
         }
     })
+    // web socket close
     ws.on('close', () => {
         users.splice(index, 1)
         broadcast({
